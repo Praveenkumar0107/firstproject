@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pricing Plans</title>
+</head>
+<body>
+    <section class="pricing section">
+    <div class="wrapper">
+        <div class="title">
+            <h2>Choose Your Plans</h2>
+            <div class="toggle__section"><span>Monthly</span>
+                <input type="checkbox" name="" id="check">
+                <label for="check" class="toggle__btn">
+                    <span></span>
+                </label>
+            <span>Annualy</span></div>
+        </div>
+        <div class="price__cards">
+            <div class="price__card">
+                <div class="price__details">
+                    <h3>Free</h3>
+                    <p>send really big files regularly</p>
+                    <ul>
+                        <li>send upto 2 GB</li>
+                        <li>No need to verify</li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="price">0
+                </div>
+                <span>per person</span>
+                <a href="a" class="btn bg__accent-2">Get started</a>
+            </div>
+        <div class="price__card bg__accent-2">
+                <div class="price__details">
+                    <h3>Pro</h3>
+                    <p>send really big files regularly</p>
+                    <ul>
+                        <li>Encrypted file storage</li>
+                        <li>Access your files from any devices</li>
+                        <li>Get access to all our services</li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="price" id="Pro">3.69
+                </div>
+                <span>per person, Monthly</span>
+                <a href="a" class="btn bg__accent">Get 200 GB</a>
+            </div>
+             <div class="price__card bg__accent">
+                <div class="price__details">
+                    <h3>Premium</h3>
+                    <p>send really big files regularly</p>
+                    <ul>
+                        <li>Encrypted file storage</li>
+                        <li>Access your files from any devices</li>
+                        <li>Get access to all our services</li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="price" id="Premium">8.99
+                </div>
+                <span>per person, Monthly</span>
+                <a href="a" class="btn bg__primary">Get 2 TB</a>
+            </div>
+        </div>
+    </div>
+    </section>
+    <script>
+        let toggleBtn = document.querySelector('.toggle__btn');
+        let ProPrice = document.querySelector('#Pro');
+        let PremiumPrice = document.querySelector('#Premium');
+
+        toggleBtn.addEventListener('click',()=>{
+            const newPro = ProPrice.innerHTML ==='3.69' ? '39' : '3.69'; 
+            ProPrice.innerHTML = newPro;
+            const newPremium = PremiumPrice.innerHTML ==='8.99' ? '99' : '8.99'; 
+            PremiumPrice.innerHTML = newPremium;
+        })
+    </script>
+</body>
+</html>
